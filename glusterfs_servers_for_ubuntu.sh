@@ -34,5 +34,5 @@ for SERVER_HOST in "${SERVER_HOSTS[@]}"
 do
 	ssh $SERVER_HOST mkdir $COMMON_PATH
 	echo "$SERVER_HOST:/$GFS_VOL_NAME $COMMON_PATH $GFS_DIR_NAME defaults,_netdev 0 0" | ssh $SERVER_HOST "cat >> /etc/fstab"
-    ssh $SERVER_HOST mount $COMMON_PATH
+	ssh $SERVER_HOST mount $COMMON_PATH
 done
